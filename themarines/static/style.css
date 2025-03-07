@@ -1,0 +1,101 @@
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333; /* Slightly darker font color for better readability */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #35424a, #2a3d4d); /* Gradient background */
+    color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem; /* Larger font size for the header */
+    letter-spacing: 1px; /* Slightly increase letter spacing */
+}
+
+/* Navigation Styles */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    position: relative; /* For hover effects */
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #ffdd57; /* Change link color on hover */
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+.container {
+    max-width: 1200px; /* Better max-width for larger screens */
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+main {
+    padding: 20px;
+    background: #ffffff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #35424a, #2a3d4d);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0; /* Reset padding for mobile */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 2rem; /* Adjust header size for smaller screens */
+    }
+}
