@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 
 def home(request):
     """
-    Render the home page.
+    Render the home page for the band application
 
     Args:
         request (HttpRequest): The HTTP request object.

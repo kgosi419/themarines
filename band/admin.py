@@ -6,15 +6,12 @@ from .models import Song
 @admin.register(Song)
 class SongAdmin(admin.ModelAdmin):
     """
-    Admin interface for managing Song instances.
+    Admin configuration for managing Song instances in the Django admin interface.
 
-    This class customizes the display and functionality of the Song model
-    in the Django admin site. It specifies the fields that will be shown
-    in the list view.
 
-    Attributes:
-        list_display (tuple): A tuple of field names that will be displayed
-            in the admin list view for the Song model.
+    Args:
+        models (ModelAdmin): Inherited class from Django's ModelAdmin for configuring various
+                             admin options related to the Song model.
+
     """
-
     list_display = ('title', 'artist', 'album', 'release_date', 'genre')
