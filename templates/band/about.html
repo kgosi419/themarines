@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}About themarines{% endblock %}
+
+{% block content %}
+<header class="header">
+    <h1>themarines</h1>
+</header>
+
+<nav class="nav">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'music' %}">Music</a>
+    {% if user.is_authenticated %}
+        <span class="greeting">Hello, {{ user.username }}! <a href="{% url 'logout' %}">Logout</a></span>
+    {% else %}
+        <a href="{% url 'login' %}" class="login">Login</a>
+    {% endif %}
+</nav>
+
+<div class="content">
+    <h2>About themarines</h2>
+    <p>We are themarines, a POP band formed in 2023. Our music blends various genres, including rock, pop, and blues.</p>
+    <p>Our journey began in a small garage. Made up of four members, led by our frontman Loyiso, we have become the face of blue-eyed soul in the 21st century. With hard work and passion, we have been bringing our sound to audiences around the world.</p>
+    <p>Join us as we continue to create, perform, and inspire through music!</p>
+</div>
+{% endblock %}
